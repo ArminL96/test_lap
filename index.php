@@ -18,9 +18,9 @@
         <?php require_once('private/partials/header.php'); ?>
         
         <div class="container-fluid main-content">
-
-
-
+            <div class="cards-container">
+                <?php require_once('private/partials/card.php'); ?>
+            </div>
         </div>
 
         <?php require_once('private/partials/footer.php'); ?>

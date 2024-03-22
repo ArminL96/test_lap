@@ -8,7 +8,7 @@
     </div>
 
     <h2>Login</h2>
-    <form id="loginForm" action="private/php/login.php" method="post">
+    <form id="loginForm" action="private/php/Login.php" method="post">
         <div class="form-group row">
             <label for="username" class="col-sm-2 col-form-label">Username:</label>
             <div class="col-sm-10">
@@ -40,6 +40,7 @@
                     if (response === 'success') {
                         window.location.href = 'index.php';
                     } else {
+                        console.log(response);
                         $('.wrong-login-data').show();
                     }
                 }
