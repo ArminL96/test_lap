@@ -1,0 +1,18 @@
+{
+    "name": "viuser/test_lap",
+    "type": "project",
+    "require": {
+        "twbs/bootstrap": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Viuser\\TestLap\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AL",
+            "email": "lepuschitz.armin96@gmail.com"
+        }
+    ]
+}

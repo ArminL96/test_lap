@@ -1,0 +1,62 @@
+@startuml
+
+skin rose
+
+entity "Customer" as cust {
+  * ID | int
+  --
+  * firstname | varchar(255)
+  * lastname | varchar(255)
+}
+
+entity "Processor" as proc {
+  * ID | int
+  --
+  * name | varchar(255)
+  * price | int
+}
+
+entity "Manufacturer" as manu {
+  * ID | int
+  --
+  * name | varchar(255)
+}
+
+entity "ExtraGPU" as gpu {
+  * ID | int
+  --
+  * price | int
+}
+
+entity "ExtraSSD" as ssd {
+  * ID | int
+  --
+  * price | int
+}
+
+entity "Computer" as comp {
+  * ID | int
+  --
+  * name | varchar(255)
+  * base_price | int
+  * ID_processor | int
+  * ID_manufacturer | int
+  * ID_ssd | int
+  * ID_gpu | int
+}
+
+entity "Order" as order {
+  * ID | int
+  --
+  * ID_customer | int
+  * ID_computer | int
+}
+
+order "n"--"1" cust
+comp "n"--"1" order
+comp "1"--"1" proc
+comp "n"--"1" manu
+comp "1"--"1" gpu
+comp "1"--"1" ssd
+
+@enduml
